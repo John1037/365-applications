@@ -1,0 +1,10 @@
+{
+  "name": "365-applications",
+  "private": true,
+  "description": "Static launcher site for 365applications.com",
+  "scripts": {
+    "build": "echo \"No build step: public/ is served as static assets\"",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  }
+}
