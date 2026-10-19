@@ -1,0 +1,10 @@
+{
+  "name": "365-applications",
+  "compatibility_date": "2026-10-01",
+  // Static site only: everything in ./public is served as-is, no Worker script.
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

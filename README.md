@@ -1,0 +1,17 @@
+# 365 Applications
+
+Source for [365applications.com](https://365applications.com), the launcher site for the 365 Applications apps.
+
+- Static HTML/CSS in `public/`, served by the `365-applications` Cloudflare Worker as static assets (see `wrangler.jsonc`).
+- Pushing to `main` deploys to production via Cloudflare Workers Builds.
+- No build step, no JavaScript, no third-party requests. Security headers live in `public/_headers`.
+
+## Local preview
+
+```sh
+npx wrangler dev
+```
+
+## Adding an app
+
+Add a card to the `#apps` grid in `public/index.html`, and a row to the tables in `public/privacy/index.html` and `public/terms/index.html`.
