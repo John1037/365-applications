@@ -103,10 +103,14 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.025em; line-height:
 .app-icon {
   width: 52px; height: 52px; border-radius: 14px;
   display: grid; place-items: center;
-  background: rgba(61, 220, 151, 0.1); color: var(--accent);
-  border: 1px solid rgba(61, 220, 151, 0.35);
+  background: rgba(255, 255, 255, 0.04); color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   font-weight: 800; font-size: 18px; letter-spacing: -0.03em;
+  overflow: hidden; padding: 9px;
 }
+.app-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* Logo that is already a complete app-icon tile: let it fill edge to edge. */
+.app-icon--full { padding: 0; background: none; }
 .status { font-size: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--live); display: inline-flex; align-items: center; gap: 6px; }
 .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 .status.soon { color: var(--muted); }
