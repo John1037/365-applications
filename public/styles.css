@@ -8,7 +8,6 @@
   --line: rgba(255, 255, 255, 0.09);
   --accent: #3ddc97;
   --accent-ink: #07130e;
-  --live: #3ddc97;
   --radius: 18px;
   --max: 1080px;
   --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -97,30 +96,27 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.025em; line-height:
   backdrop-filter: blur(10px);
   transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
 }
-.app:hover { box-shadow: 0 0 0 1px var(--accent), 0 12px 40px -12px rgba(61, 220, 151, 0.35); }
-.app:hover { border-color: var(--accent); transform: translateY(-2px); }
+.app:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 0 0 1px var(--accent), 0 12px 40px -12px rgba(61, 220, 151, 0.35); }
 .app-top { display: flex; align-items: center; justify-content: space-between; }
 .app-icon {
   width: 52px; height: 52px; border-radius: 14px;
   display: grid; place-items: center;
-  background: rgba(255, 255, 255, 0.04); color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  font-weight: 800; font-size: 18px; letter-spacing: -0.03em;
   overflow: hidden; padding: 9px;
 }
 .app-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
 /* Logo that is already a complete app-icon tile: let it fill edge to edge. */
 .app-icon--full { padding: 0; background: none; }
-.status { font-size: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--live); display: inline-flex; align-items: center; gap: 6px; }
+.status { font-size: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
 .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
-.status.soon { color: var(--muted); }
 .app h3 { margin: 0; font-size: 22px; letter-spacing: -0.02em; }
 .app h3 .n { color: var(--accent); }
 .app p { margin: 0; color: var(--muted); flex: 1; }
 .app-link { font-family: var(--mono); font-size: 14px; color: var(--ink); }
 .app-link::after { content: " \2192"; }
 .app.placeholder { border-style: dashed; background: transparent; justify-content: center; text-align: center; }
-.app.placeholder:hover { transform: none; border-color: var(--line); }
+.app.placeholder:hover { transform: none; border-color: var(--line); box-shadow: none; }
 
 /* About */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
